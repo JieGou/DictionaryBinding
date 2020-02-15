@@ -8,8 +8,16 @@ namespace PrismDictionaryBinding.ViewModels
     {
         public MainWindowViewModel(IRegionManager regionManager)
         {
+            //在主窗口中注册使用自定义控件
             regionManager.RegisterViewWithRegion("ContentRegion", typeof(ContentView));
         }
+
+        /// <summary>
+        /// 标题
+        /// </summary>
+        /// <remarks>
+        /// 在xaml中直接绑定
+        /// </remarks>
 
         public string Title => "Prism Dictionary Binding";
     }
