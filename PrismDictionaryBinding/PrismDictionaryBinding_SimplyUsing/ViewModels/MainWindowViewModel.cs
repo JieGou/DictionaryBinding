@@ -9,7 +9,7 @@ namespace PrismDictionaryBinding.ViewModels
         public MainWindowViewModel()
         {
             //在主窗口中注册使用自定义控件
-            this.ControlViewControl = new ContentView();
+            this.UserControlView = new ContentView();
         }
 
         /// <summary>
@@ -23,12 +23,12 @@ namespace PrismDictionaryBinding.ViewModels
 
         #region 使用绑定方法，后台MainWindowViewModel支持
 
-        private UserControl _controlViewControl;
+        private UserControl _userUserControlView;
 
-        public UserControl ControlViewControl
+        public UserControl UserControlView
         {
-            get => _controlViewControl;
-            set => SetProperty(ref _controlViewControl, value);
+            get => _userUserControlView;
+            set => SetProperty(ref _userUserControlView, value);
         }
 
         #endregion 使用绑定方法，后台MainWindowViewModel支持
