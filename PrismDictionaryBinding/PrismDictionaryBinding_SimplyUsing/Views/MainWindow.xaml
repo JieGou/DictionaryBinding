@@ -5,6 +5,7 @@
 xmlns:uc="clr-namespace:PrismDictionaryBinding.Views"
         Title="{Binding Title}" Height="350" Width="525">
     <Grid>
-        <uc:ContentView />
+        <!--<uc:ContentView />-->
+        <ContentControl Content="{Binding ControlViewControl}" />
     </Grid>
 </Window>

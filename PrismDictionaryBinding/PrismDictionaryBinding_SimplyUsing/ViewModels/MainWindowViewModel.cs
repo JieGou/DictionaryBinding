@@ -1,5 +1,6 @@
 ﻿using Prism.Mvvm;
 using PrismDictionaryBinding.Views;
+using System.Windows.Controls;
 
 namespace PrismDictionaryBinding.ViewModels
 {
@@ -8,7 +9,7 @@ namespace PrismDictionaryBinding.ViewModels
         public MainWindowViewModel()
         {
             //在主窗口中注册使用自定义控件
-            this.ControlViewModel = new ContentViewModel();
+            this.ControlViewControl = new ContentView();
         }
 
         /// <summary>
@@ -20,12 +21,16 @@ namespace PrismDictionaryBinding.ViewModels
 
         public string Title => "Prism Dictionary Binding";
 
-        private BindableBase _controlViewModel;
+        #region 使用绑定方法，后台MainWindowViewModel支持
 
-        public BindableBase ControlViewModel
+        private UserControl _controlViewControl;
+
+        public UserControl ControlViewControl
         {
-            get { return _controlViewModel; }
-            set { SetProperty(ref _controlViewModel, value); }
+            get => _controlViewControl;
+            set => SetProperty(ref _controlViewControl, value);
         }
+
+        #endregion 使用绑定方法，后台MainWindowViewModel支持
     }
 }
